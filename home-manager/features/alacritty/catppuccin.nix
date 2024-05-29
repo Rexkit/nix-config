@@ -1,5 +1,5 @@
 { pkgs, config, ... }: {
-  colors = {
+  colors = with config.colorScheme.colors; {
     primary = {
       background = "0x${base00}";
       foreground = "0x${base05}";
