@@ -1,85 +1,85 @@
-{ pkgs, config, ... }: {
-  colors = with config.colorScheme.colors; {
+{
+  colors = {
     primary = {
-      background = "0x${base00}";
-      foreground = "0x${base05}";
-      dim_foreground = "0x${base05}";
-      bright_foreground = "0x${base05}";
+      background = "#1E1E2E";
+      foreground = "#CDD6F4";
+      dim_foreground = "#CDD6F4";
+      bright_foreground = "#CDD6F4";
     };
     cursor = {
-      text = "0x${base00}";
-      cursor = "0x${base06}";
+      text = "#1E1E2E";
+      cursor = "#F5E0DC";
     };
     vi_mode_cursor = {
-      text = "0x${base00}";
-      cursor = "0x${base07}";
+      text = "#1E1E2E";
+      cursor = "#B4BEFE";
     };
     search = {
       matches = {
-        foreground = "0x${base00}";
+        foreground = "#1E1E2E";
         background = "#A6ADC8";
       };
       focused_match = {
-        foreground = "0x${base00}";
-        background = "0x${base0B}";
+        foreground = "#1E1E2E";
+        background = "#A6E3A1";
       };
     };
     footer_bar = {
-      foreground = "0x${base00}";
+      foreground = "#1E1E2E";
       background = "#A6ADC8";
     };
     hints = {
       start = {
-        foreground = "0x${base00}";
-        background = "0x${base0A}";
+        foreground = "#1E1E2E";
+        background = "#F9E2AF";
       };
       end = {
-        foreground = "0x${base00}";
+        foreground = "#1E1E2E";
         background = "#A6ADC8";
       };
     };
     selection = {
-      text = "0x${base00}";
-      background = "0x${base06}";
+      text = "#1E1E2E";
+      background = "#F5E0DC";
     };
     normal = {
-      black = "0x${base03}";
-      red = "0x${base08}";
-      green = "0x${base0B}";
-      yellow = "0x${base0A}";
-      blue = "0x${base0D}";
+      black = "#45475A";
+      red = "#F38BA8";
+      green = "#A6E3A1";
+      yellow = "#F9E2AF";
+      blue = "#89B4FA";
       magenta = "#F5C2E7";
-      cyan = "0x${base0C}";
+      cyan = "#94E2D5";
       white = "#BAC2DE";
     };
     bright = {
       black = "#585B70";
-      red = "0x${base08}";
-      green = "0x${base0B}";
-      yellow = "0x${base0A}";
-      blue = "0x${base0D}";
+      red = "#F38BA8";
+      green = "#A6E3A1";
+      yellow = "#F9E2AF";
+      blue = "#89B4FA";
       magenta = "#F5C2E7";
-      cyan = "0x${base0C}";
+      cyan = "#94E2D5";
       white = "#A6ADC8";
     };
     dim = {
-      black = "0x${base03}";
-      red = "0x${base08}";
-      green = "0x${base0B}";
-      yellow = "0x${base0A}";
-      blue = "0x${base0D}";
+      black = "#45475A";
+      red = "#F38BA8";
+      green = "#A6E3A1";
+      yellow = "#F9E2AF";
+      blue = "#89B4FA";
       magenta = "#F5C2E7";
-      cyan = "0x${base0C}";
+      cyan = "#94E2D5";
       white = "#BAC2DE";
     };
     indexed_colors = [
       {
         index = 17;
-        color = "0x${base06}";
+        color = "#F5E0DC";
       }
       {
         index = 16;
-        color = "0x${base09}";
+        color = "#FAB387";
       }
     ];
   };

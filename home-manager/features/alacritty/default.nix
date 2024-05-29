@@ -1,4 +1,4 @@
-{ pkgs, config, ... }: let
+_: let
   catppuccin = import ./catppuccin.nix;
 in {
   programs.alacritty = {
@@ -6,7 +6,7 @@ in {
 
     settings = {
       inherit (catppuccin) colors;
-
+      
       window = {
         position = "None";
         dynamic_padding = true;
