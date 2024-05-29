@@ -177,6 +177,7 @@
         "col.border_inactive" = "$group_border_inactive_col";
         "col.border_locked_active" = "$group_border_locked_active_col";
         "col.border_locked_inactive" = "$group_border_locked_inactive_col";
+        
         groupbar = {
           enabled = true;
           font_family = "$groupbar_font_family";
@@ -190,7 +191,7 @@
           "col.inactive" = "$group_border_inactive_col";
           "col.locked_active" = "$group_border_locked_active_col";
           "col.locked_inactive" = "$group_border_locked_inactive_col";
-        }
+        };
       };
 
       binds = {
