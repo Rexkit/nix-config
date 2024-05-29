@@ -177,7 +177,7 @@
         "col.border_inactive" = "$group_border_inactive_col";
         "col.border_locked_active" = "$group_border_locked_active_col";
         "col.border_locked_inactive" = "$group_border_locked_inactive_col";
-        
+
         groupbar = {
           enabled = true;
           font_family = "$groupbar_font_family";
@@ -228,7 +228,7 @@
         default_split_ratio = 1.0;
       };
 
-      windowrule = {
+      windowrule = [
         "float, foot-float|alacritty-float"
         "float, yad|nm-connection-editor|pavucontrolk"
         "float, xfce-polkit|kvantummanager|qt5ct"
@@ -245,9 +245,9 @@
 
         "animation slide down,foot-full"
         "animation slide up,wlogout"
-      };
+      ];
 
-      bind = {
+      bind = [
         "SUPER,       Return, exec, alacritty"
         "SUPER_SHIFT, Return, exec, alacritty -f"
         "SUPER,       T,      exec, alacritty -F"
@@ -304,9 +304,9 @@
         # Change Workspace Mode
         "SUPER_CTRL, F, workspaceopt, allfloat"
         "SUPER_CTRL, S, workspaceopt, allpseudo"
-      };
+      ];
 
-      binde = {
+      binde = [
         # Resize Active
         "SUPER_CTRL, left,  resizeactive, -20 0"
         "SUPER_CTRL, right, resizeactive, 20 0"
@@ -318,13 +318,13 @@
         "SUPER_ALT, right, moveactive, 20 0"
         "SUPER_ALT, up,    moveactive, 0 -20"
         "SUPER_ALT, down,  moveactive, 0 20"
-      };
+      ];
 
-      bindm = {
+      bindm = [
         #Mouse Buttons
         "SUPER, mouse:272, movewindow"
         "SUPER, mouse:273, resizewindow"
-      };
+      ];
 
     };
   };
