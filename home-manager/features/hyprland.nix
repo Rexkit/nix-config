@@ -118,13 +118,13 @@
       };
 
       input = {
-        kb_layout = us,ru;
+        kb_layout = "us,ru";
         kb_options = grp:alt_shift_toggle;
         numlock_by_default = false;
         repeat_rate = 25;
         repeat_delay = 600;
         sensitivity = 1.0;
-        accel_profile = adaptive;
+        accel_profile = "adaptive";
         force_no_accel = true;
         left_handed = false;
         scroll_method = "2fg";
