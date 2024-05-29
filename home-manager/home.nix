@@ -15,7 +15,7 @@
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
     inputs.nix-colors.homeManagerModules.default
-    ./features/alacritty.nix
+    ./features/alacritty
     ./features/hyprland.nix
   ];
 
