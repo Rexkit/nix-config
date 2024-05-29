@@ -252,6 +252,7 @@
         "SUPER_SHIFT, Return, exec, alacritty -f"
         "SUPER,       T,      exec, alacritty -F"
 
+        "SUPER,       Q,      killactive,"
         "SUPER,       C,      killactive,"
         "CTRL_ALT,    Delete, exit,"
         "SUPER,       F,      fullscreen, 0"
