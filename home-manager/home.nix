@@ -18,6 +18,7 @@
     ./features/fonts
     ./features/alacritty
     ./features/hyprland.nix
+    ./features/vsc
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;

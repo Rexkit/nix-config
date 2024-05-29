@@ -252,6 +252,8 @@
         "SUPER_SHIFT, Return, exec, alacritty -f"
         "SUPER,       T,      exec, alacritty -F"
 
+        "SUPER_SHIFT, W, exec, floorp"
+
         "SUPER,       Q,      killactive,"
         "SUPER,       C,      killactive,"
         "CTRL_ALT,    Delete, exit,"
