@@ -4,42 +4,42 @@ in {
   programs.alacritty = {
     enable = true;
 
-    font = {
-      ## Font size in points.
-      size = 10;
-
-      ## When true, Alacritty will use a custom built-in font for box drawing characters and powerline symbols.
-      builtin_box_drawing = true;
-
-      normal = {
-        family = "JetBrainsMono Nerd Font";
-      };
-
-      bold = {
-        family = "JetBrainsMono Nerd Font";
-      };
-
-      italic = {
-        family = "JetBrainsMono Nerd Font";
-      };
-
-      bold_italic = {
-        family = "JetBrainsMono Nerd Font";
-      };
-
-      offset = {
-        x = 0;
-        y = 0;
-      };
-
-      glyph_offset = {
-        x = 0;
-        y = 0;
-      };
-    };
-
     settings = {
       inherit (catppuccin) colors;
+
+      font = {
+        ## Font size in points.
+        size = 10;
+
+        ## When true, Alacritty will use a custom built-in font for box drawing characters and powerline symbols.
+        builtin_box_drawing = true;
+
+        normal = {
+          family = "JetBrainsMono Nerd Font";
+        };
+
+        bold = {
+          family = "JetBrainsMono Nerd Font";
+        };
+
+        italic = {
+          family = "JetBrainsMono Nerd Font";
+        };
+
+        bold_italic = {
+          family = "JetBrainsMono Nerd Font";
+        };
+
+        offset = {
+          x = 0;
+          y = 0;
+        };
+
+        glyph_offset = {
+          x = 0;
+          y = 0;
+        };
+      };
       
       window = {
         position = "None";
