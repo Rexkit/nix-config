@@ -36,10 +36,10 @@
         gaps_in = "$hypr_gaps_in";
         gaps_out = "$hypr_gaps_out";
         gaps_workspaces = "$hypr_gaps_ws";
-        col.active_border = "$active_border_col_1 $active_border_col_2 $gradient_angle";
-        col.inactive_border = "$inactive_border_col_1 $inactive_border_col_2 $gradient_angle";
-        col.nogroup_border = "$group_border_col";
-        col.nogroup_border_active = "$group_border_active_col";
+        "col.active_border" = "$active_border_col_1 $active_border_col_2 $gradient_angle";
+        "col.inactive_border" = "$inactive_border_col_1 $inactive_border_col_2 $gradient_angle";
+        "col.nogroup_border" = "$group_border_col";
+        "col.nogroup_border_active" = "$group_border_active_col";
         cursor_inactive_timeout = 30;
         layout = "dwindle";
         no_cursor_warps = false;
@@ -60,8 +60,8 @@
         shadow_range = 25;
         shadow_render_power = 3;
         shadow_ignore_window = false;
-        col.shadow = "$active_shadow_col";
-        col.shadow_inactive = "$inactive_shadow_col";
+        "col.shadow" = "$active_shadow_col";
+        "col.shadow_inactive" = "$inactive_shadow_col";
         shadow_offset = "0 0";
         shadow_scale = 1;
         dim_inactive = false;
