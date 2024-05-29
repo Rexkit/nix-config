@@ -86,7 +86,7 @@
         };
       };
 
-      animations {
+      animations = {
         enabled = true;
         first_launch_animation = true;
         animation = [
@@ -170,7 +170,7 @@
         workspace_swipe_use_r = false;
       };
 
-      group {
+      group = {
         insert_after_current = true;
         focus_removed_window = true;
         "col.border_active" = "$group_border_active_col";
