@@ -32,7 +32,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.nkuzin = import ./home-manager/home.nix;
-            extraSpecialArgs = { inherit inputs outputs; };
+            home-manager.extraSpecialArgs = { inherit inputs outputs; };
           }
         ];
       };
