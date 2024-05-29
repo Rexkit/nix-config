@@ -14,7 +14,11 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
+    nix-colors.homeManagerModules.default
+    ./features/hyprland.nix
   ];
+
+  colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
 
   # TODO: Set your username
   home = {
@@ -24,7 +28,12 @@
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
-  # home.packages = with pkgs; [ steam ];
+  home.packages = with pkgs; [
+    # utils
+    wl-clipboard
+    wl-screenrec
+    wlr-randr
+  ];
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
