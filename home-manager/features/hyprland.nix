@@ -253,6 +253,7 @@
         "SUPER,       T,      exec, alacritty -F"
 
         "SUPER_SHIFT, W, exec, floorp"
+        "SUPER_SHIFT, F, exec, thunar"
 
         "SUPER,       Q,      killactive,"
         "SUPER,       C,      killactive,"
