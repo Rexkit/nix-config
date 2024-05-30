@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   #to save prefs
   programs.xfconf = {
     enable = true;
