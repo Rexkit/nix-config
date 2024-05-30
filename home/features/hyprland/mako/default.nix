@@ -21,7 +21,6 @@
 
     extraConfig = ''
       history=1
-      max-history=100
       text-alignment=left
       icon-location=left
       on-button-left=dismiss
