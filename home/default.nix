@@ -37,11 +37,6 @@
     font = {
       name = "Noto Sans 9";
     };
-
-    iconTheme = {
-      name = "breeze-dark";
-      package = pkgs.breeze-icons;
-    };
   };
 
   # TODO: Set your username
