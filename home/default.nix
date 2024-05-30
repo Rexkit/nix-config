@@ -36,7 +36,7 @@
 
     font = {
       name = "Noto Sans 9";
-    ;
+    };
 
     iconTheme = {
       name = "breeze-dark";
