@@ -6,9 +6,6 @@
     actions = true;
     markup = true;
     anchor = "top-right";
-    backgroundColor = "#1E1E2E";
-    borderColor = "#28283d";
-    textColor = "#CDD6F4";
     borderRadius = 12;
     borderSize = 4;
     font = "JetBrains Mono 10";
