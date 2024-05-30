@@ -1,6 +1,6 @@
 { pkgs, lib, config, ... }: {
   imports = [
-    ./mako
+    # ./mako
   ];
 
   xdg.portal = let
