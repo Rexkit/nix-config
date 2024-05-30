@@ -14,6 +14,7 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
+    inputs.catppuccin.homeManagerModules.catppuccin
     inputs.nix-colors.homeManagerModules.default
     ./features/fonts
     ./features/alacritty
@@ -24,6 +25,24 @@
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
+
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+  };
+
+  gtk = {
+    enable = true;
+
+    font = {
+      name = "Noto Sans 9";
+    ;
+
+    iconTheme = {
+      name = "breeze-dark";
+      package = pkgs.breeze-icons;
+    };
+  };
 
   # TODO: Set your username
   home = {
