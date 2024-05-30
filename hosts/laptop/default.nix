@@ -176,6 +176,13 @@
     ];
   };
 
+  security.polkit.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    git
+    xdg-desktop-portal-hyprland
+  ];
+
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.11";
 }

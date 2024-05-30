@@ -3,6 +3,17 @@
     ./mako
   ];
 
+  xdg.portal = let
+    hyprland = config.wayland.windowManager.hyprland.package;
+    xdph = pkgs.xdg-desktop-portal-hyprland.override {inherit hyprland;};
+  in {
+    extraPortals = [
+      pkgs.xdg-desktop-portal-wlr
+      xdph
+    ];
+    configPackages = [hyprland];
+  };
+
   home.packages = with pkgs; [
     (writeShellScriptBin "autostart" ''
       # Mako (Notifications)
@@ -14,6 +25,12 @@
       dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
     '')
   ];
+
+  home.sessionVariables = {
+    MOZ_ENABLE_WAYLAND = 1;
+    QT_QPA_PLATFORM = "wayland";
+    LIBSEAT_BACKEND = "logind";
+  };
 
   wayland.windowManager.hyprland = {
     enable = true;

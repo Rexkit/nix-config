@@ -39,6 +39,8 @@
     };
   };
 
+  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
+
   # TODO: Set your username
   home = {
     username = "nkuzin";
