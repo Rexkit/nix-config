@@ -163,6 +163,10 @@
     enable = true;
   };
 
+  programs.dconf = {
+    enable = true;
+  };
+
   programs.thunar = {
     enable = true;
 
