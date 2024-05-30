@@ -1,4 +1,8 @@
 { pkgs, lib, config, ... }: {
+  imports = [
+    ./mako
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
 

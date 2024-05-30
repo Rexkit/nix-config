@@ -18,7 +18,7 @@
     inputs.nix-colors.homeManagerModules.default
     ./features/fonts
     ./features/alacritty
-    ./features/hyprland.nix
+    ./features/hyprland
     ./features/vsc
     ./features/floorp
     ./features/discord
