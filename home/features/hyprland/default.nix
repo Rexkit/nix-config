@@ -3,6 +3,18 @@
     ./mako
   ];
 
+  home.packages = with pkgs; [
+    (writeShellScriptBin "autostart" ''
+      # Mako (Notifications)
+      pkill mako
+      mako &
+
+      # Others
+      /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+      dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
+    '')
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
 
@@ -334,6 +346,9 @@
         "SUPER, mouse:273, resizewindow"
       ];
 
+      exec-once = [
+        "autostart"
+      ];
     };
   };
 }
