@@ -42,6 +42,8 @@
     settings = {
       monitor = ",preferred,auto,auto";
 
+      "$notifycmd = notify-send -h string:x-canonical-private-synchronous:hypr-cfg -u low";
+
       # Elements
       "$hypr_border_size" = 4;
       "$hypr_gaps_in" = 10;
@@ -294,7 +296,9 @@
         "SUPER,       C,      killactive,"
         "CTRL_ALT,    Delete, exit,"
         "SUPER,       F,      fullscreen, 0"
+        "SUPER,       F,      exec, $notifycmd 'Fullscreen Mode'"
         "SUPER,       S,      pseudo,"
+        "SUPER,       S,      exec, $notifycmd 'Pseudo Mode'"
         "SUPER,       Space,  togglefloating,"
         "SUPER,       Space,  centerwindow,"
 
