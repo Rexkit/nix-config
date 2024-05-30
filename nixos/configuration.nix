@@ -97,14 +97,6 @@
     xkbVariant = "";
   };
 
-  services.displayManager = {
-    sddm = {
-      enable = true;
-      wayland.enable = true;
-      theme = "breeze";
-    };
-  };
-
   users.users = {
     nkuzin = {
       initialPassword = "123456";
