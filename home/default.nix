@@ -54,6 +54,7 @@
     wl-clipboard
     wl-screenrec
     wlr-randr
+    libnotify
 
     polkit_gnome
   ];
