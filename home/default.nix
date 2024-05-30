@@ -52,6 +52,8 @@
     wl-clipboard
     wl-screenrec
     wlr-randr
+
+    polkit_gnome
   ];
 
   # Enable home-manager and git
