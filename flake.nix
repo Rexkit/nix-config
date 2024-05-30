@@ -27,12 +27,12 @@
         specialArgs = {inherit inputs outputs;};
         # > Our main nixos configuration file <
         modules = [
-          ./nixos/configuration.nix
+          ./hosts/laptop
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.nkuzin = import ./home-manager/home.nix;
+            home-manager.users.nkuzin = import ./home;
             home-manager.extraSpecialArgs = { inherit inputs outputs; };
           }
         ];
