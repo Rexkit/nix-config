@@ -11,8 +11,8 @@
     font = "JetBrains Mono 10";
     width = 300;
     height = 100;
-    margin = 20;
-    padding = 15;
+    margin = "20";
+    padding = "15";
     icons = true;
     maxIconSize = 48;
     layer = "overlay";
