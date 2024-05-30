@@ -20,6 +20,8 @@
     ./features/hyprland.nix
     ./features/vsc
     ./features/floorp
+    ./features/discord
+    ./features/thunar
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
