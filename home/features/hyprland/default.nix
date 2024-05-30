@@ -1,6 +1,6 @@
 { pkgs, lib, config, ... }: {
   imports = [
-    # ./mako
+    ./mako
   ];
 
   xdg.portal = let
@@ -363,9 +363,9 @@
         "SUPER, mouse:273, resizewindow"
       ];
 
-      # exec-once = [
-      #   "autostart"
-      # ];
+      exec-once = [
+        "autostart"
+      ];
     };
   };
 }
