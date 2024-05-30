@@ -92,9 +92,22 @@
 
   # Configure keymap in X11
   services.xserver = {
+    enable = true;
     layout = "us";
     xkbVariant = "";
+
+    displayManager = {
+      sddm = {
+        enable = true;
+        wayland.enable = true;
+        theme = "where_is_my_sddm_theme";
+      };
+    };
   };
+
+  environment.systemPackages = with pkgs; [
+    where-is-my-sddm-theme
+  ];
 
   users.users = {
     nkuzin = {
