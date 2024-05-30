@@ -1,12 +1,8 @@
-_: let
-  catppuccin = import ./catppuccin.nix;
-in {
+{
   programs.alacritty = {
     enable = true;
 
     settings = {
-      inherit (catppuccin) colors;
-
       font = {
         ## Font size in points.
         size = 10;
