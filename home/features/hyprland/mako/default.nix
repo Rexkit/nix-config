@@ -19,15 +19,15 @@
     maxVisible = 5;
     sort = "-time";
 
-    extraConfig = ''
-      history=1
-      text-alignment=left
-      icon-location=left
-      on-button-left=dismiss
-      on-button-middle=none
-      on-button-right=dismiss-all
-      on-touch=dismiss
+    # history=1
+    # text-alignment=left
+    # icon-location=left
+    # on-button-left=dismiss
+    # on-button-middle=none
+    # on-button-right=dismiss-all
+    # on-touch=dismiss
 
+    extraConfig = ''
       [urgency=low]
       border-color=#28283d
       default-timeout=2000
