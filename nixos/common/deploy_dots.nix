@@ -10,7 +10,7 @@
     recursive = false;
   };
 
-  home.file."~/.local/share/fonts" = {
+  home.file.".local/share/fonts" = {
     source = ../.. + "/common" + /fonts;
     recursive = true;
   };
