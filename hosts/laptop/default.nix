@@ -96,6 +96,8 @@
       layout = "us";
       variant = "";
     };
+
+    displayManager.sddm.enable = true;
   };
 
   users.users = {
