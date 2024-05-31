@@ -71,7 +71,7 @@
           "tooltip-format" = "{controller_alias}\t{controller_address}";
           "tooltip-format-connected" = "{controller_alias}\t{controller_address}\n\n{device_enumerate}";
           "tooltip-format-enumerate-connected" = "{device_alias}\t{device_address}";
-          "on-click" = "~/.config/hypr/scripts/rofi_bluetooth";
+          "on-click" = "~/.config/rofi/scripts/rofi_bluetooth";
           "on-click-right" = "blueman-manager";
         };
 
