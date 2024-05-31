@@ -60,15 +60,15 @@
     #system
     polkit_gnome
     xdg-desktop-portal-hyprland
-    networkmanagerapplet
     networkmanager_dmenu
-    glib
-    glib-networking
-    gobject-introspection
-    (python3.withPackages (subpkgs: with subpkgs; [
-      pip
-      pygobject3
-    ]))
+    # networkmanagerapplet
+    # glib
+    # glib-networking
+    # gobject-introspection
+    # (python3.withPackages (subpkgs: with subpkgs; [
+    #   pip
+    #   pygobject3
+    # ]))
   ];
 
   # Enable home-manager and git

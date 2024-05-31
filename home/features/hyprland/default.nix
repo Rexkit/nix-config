@@ -288,7 +288,7 @@
       "$rofi_launcher" = "~/.config/rofi/scripts/rofi_launcher";
       "$rofi_runner" = "~/.config/rofi/scripts/rofi_runner";
       "$rofi_music" = "~/.config/rofi/scripts/rofi_music";
-      "$rofi_network" = "~/.config/rofi/scripts/rofi_network";
+      "$rofi_network" = "networkmanager-dmenu";
       "$rofi_bluetooth" = "~/.config/rofi/scripts/rofi_bluetooth";
       "$rofi_powermenu" = "~/.config/rofi/scripts/rofi_powermenu";
       "$rofi_screenshot" = "~/.config/rofi/scripts/rofi_screenshot";

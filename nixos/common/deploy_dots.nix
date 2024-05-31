@@ -5,6 +5,11 @@
     recursive = true;
   };
 
+  home.file."${config.xdg.configHome}/networkmanager-dmenu" = {
+    source = ../.. + "/common" + /networkmanager-dmenu;
+    recursive = false;
+  };
+
   # home.file."${config.xdg.configHome}/" = {
   #   source = ../../.. + "/${hostname}" + /;
   #   recursive = true;
