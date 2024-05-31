@@ -183,6 +183,8 @@
     btop
     git
     xdg-desktop-portal-hyprland
+    networkmanagerapplet
+    networkmanager_dmenu
   ];
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
