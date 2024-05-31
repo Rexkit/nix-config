@@ -26,7 +26,7 @@
       dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
     '')
 
-    (writeShellScriptBin "alacritty-sc" ''
+    (writeShellScriptBin "alacritty_script" ''
       if [ "$1" == "-f" ]; then
         alacritty --class 'alacritty-float,alacritty-float'"
       elif [ "$1" == "-F" ]; then
@@ -307,7 +307,7 @@
       "$rofi_screenshot" = "~/.config/rofi/scripts/rofi_screenshot";
       "$rofi_asroot" = "~/.config/rofi/scripts/rofi_asroot";
 
-      "$editor" = "alacritty-sc";
+      "$editor" = "alacritty_script";
 
       bind = [
         "SUPER, D,       exec, $rofi_launcher"
