@@ -179,6 +179,8 @@
   security.polkit.enable = true;
 
   environment.systemPackages = with pkgs; [
+    neofetch
+    btop
     git
     xdg-desktop-portal-hyprland
   ];

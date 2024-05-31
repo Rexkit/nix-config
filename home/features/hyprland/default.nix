@@ -1,6 +1,7 @@
 { pkgs, lib, config, ... }: {
   imports = [
     ./mako
+    ./rofi
   ];
 
   xdg.portal = let
