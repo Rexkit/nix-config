@@ -25,6 +25,19 @@
       /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
       dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
     '')
+
+    (writeShellScriptBin "alacritty-sc" ''
+      if [ "$1" == "-f" ]; then
+        alacritty --class 'alacritty-float,alacritty-float'"
+      elif [ "$1" == "-F" ]; then
+        alacritty --class 'alacritty-fullscreen,alacritty-fullscreen'" \
+              -o window.startup_mode="'Fullscreen'" \
+              window.padding.x=30 window.padding.y=30 \
+              window.opacity=0.95 font.size=14
+      else
+        alacritty"
+      fi
+    '')
   ];
 
   home.sessionVariables = {
@@ -288,11 +301,13 @@
       "$rofi_launcher" = "~/.config/rofi/scripts/rofi_launcher";
       "$rofi_runner" = "~/.config/rofi/scripts/rofi_runner";
       "$rofi_music" = "~/.config/rofi/scripts/rofi_music";
-      "$rofi_network" = "networkmanager-dmenu";
+      "$rofi_network" = "networkmanager_dmenu";
       "$rofi_bluetooth" = "~/.config/rofi/scripts/rofi_bluetooth";
       "$rofi_powermenu" = "~/.config/rofi/scripts/rofi_powermenu";
       "$rofi_screenshot" = "~/.config/rofi/scripts/rofi_screenshot";
       "$rofi_asroot" = "~/.config/rofi/scripts/rofi_asroot";
+
+      "$editor" = "alacritty-sc";
 
       bind = [
         "SUPER, D,       exec, $rofi_launcher"
@@ -304,9 +319,9 @@
         "SUPER, B,       exec, $rofi_bluetooth"  
         "SUPER, X,       exec, $rofi_powermenu" 
         "SUPER, A,       exec, $rofi_screenshot"
-        "SUPER,       Return, exec, alacritty"
-        "SUPER_SHIFT, Return, exec, alacritty -f"
-        "SUPER,       T,      exec, alacritty -F"
+        "SUPER,       Return, exec, $editor"
+        "SUPER_SHIFT, Return, exec, $editor -f"
+        "SUPER,       T,      exec, $editor -F"
 
         "SUPER_SHIFT, W, exec, floorp"
         "SUPER_SHIFT, F, exec, thunar"
