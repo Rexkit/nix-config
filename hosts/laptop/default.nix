@@ -92,9 +92,9 @@
 
   # Configure keymap in X11
   services = {
-    enable = true;
-    
     xserver = {
+      enable = true;
+      
       xkb = {
         layout = "us";
         variant = "";
