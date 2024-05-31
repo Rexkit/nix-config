@@ -10,7 +10,7 @@
     recursive = false;
   };
 
-  home.file."$XDG_DATA_HOME/fonts" = {
+  home.file."~/.local/share/fonts" = {
     source = ../.. + "/common" + /fonts;
     recursive = true;
   };
