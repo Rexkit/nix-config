@@ -97,7 +97,10 @@
       variant = "";
     };
 
-    displayManager.sddm.enable = true;
+    displayManager.sddm = {
+      enable = true;
+      wayland = true;
+    };
   };
 
   users.users = {
