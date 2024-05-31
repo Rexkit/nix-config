@@ -13,10 +13,10 @@
         passthrough = false;
         spacing = 6;
         margin = "0";
-        margin-top = "0";
-        margin-bottom = "0";
-        margin-left = "0";
-        margin-right = "0";
+        margin-top = 0;
+        margin-bottom = 0;
+        margin-left = 0;
+        margin-right = 0;
         fixed-center = true;
         ipc = true;
 
