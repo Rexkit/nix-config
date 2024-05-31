@@ -180,6 +180,8 @@
 
   security.polkit.enable = true;
 
+  fonts.fontDir.enable = true;
+
   environment.systemPackages = with pkgs; [
     #utils
     neofetch

@@ -10,6 +10,11 @@
     recursive = false;
   };
 
+  home.file."$XDG_DATA_HOME/fonts" = {
+    source = ../.. + "/common" + /fonts;
+    recursive = true;
+  };
+
   # home.file."${config.xdg.configHome}/" = {
   #   source = ../../.. + "/${hostname}" + /;
   #   recursive = true;
