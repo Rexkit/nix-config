@@ -23,6 +23,9 @@
     ./features/vsc
     ./features/floorp
     ./features/discord
+    ./features/telegram
+    ./features/remmina
+    ./features/brave
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
@@ -52,23 +55,18 @@
   # programs.neovim.enable = true;
   home.packages = with pkgs; [
     # utils
+    light
     wl-clipboard
     wl-screenrec
     wlr-randr
     libnotify
 
     #system
+    freerdp3
     polkit_gnome
     xdg-desktop-portal-hyprland
     networkmanager_dmenu
-    # networkmanagerapplet
-    # glib
-    # glib-networking
-    # gobject-introspection
-    # (python3.withPackages (subpkgs: with subpkgs; [
-    #   pip
-    #   pygobject3
-    # ]))
+    networkmanagerapplet
   ];
 
   # Enable home-manager and git
