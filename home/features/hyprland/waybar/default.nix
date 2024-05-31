@@ -2,7 +2,7 @@
   programs.waybar = {
     enable = true;
     systemd.enable = true;
-    style = lib.mkDefault ./styles.css;
+    style = lib.mkForce ./styles.css;
 
     settings = {
       mainBar = {
