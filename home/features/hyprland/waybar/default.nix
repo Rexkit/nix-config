@@ -81,7 +81,7 @@
           "rotate" = 0;
           "tooltip-format" = "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>";
           "format" = " {:%I:%M %p}";
-          "format-alt" = " { =%a %b %d, %G}"
+          "format-alt" = " { =%a %b %d, %G}";
         };
 
         "custom/power" = {
