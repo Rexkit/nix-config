@@ -107,13 +107,6 @@
       ];
       # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
       extraGroups = [ "networkmanager" "wheel" ];
-
-      packages = with pkgs; [
-        (python3.withPackages (subpkgs: with subpkgs; [
-          pip
-          pygobject3
-        ]))
-      ];
     };
   };
 
@@ -188,12 +181,6 @@
   security.polkit.enable = true;
 
   environment.systemPackages = with pkgs; [
-    #system
-    xdg-desktop-portal-hyprland
-    networkmanagerapplet
-    networkmanager_dmenu
-    glib-networking
-
     #utils
     neofetch
     btop
