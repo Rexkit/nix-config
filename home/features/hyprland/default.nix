@@ -291,7 +291,7 @@
       "$rofi_network" = "~/.config/rofi/scripts/rofi_network";
       "$rofi_bluetooth" = "~/.config/rofi/scripts/rofi_bluetooth";
       "$rofi_powermenu" = "~/.config/rofi/scripts/rofi_powermenu";
-      "$rofi_screenshot" = "~/.config/rofi/scripts/rofi_screenshot"
+      "$rofi_screenshot" = "~/.config/rofi/scripts/rofi_screenshot";
       "$rofi_asroot" = "~/.config/rofi/scripts/rofi_asroot";
 
       bind = [
