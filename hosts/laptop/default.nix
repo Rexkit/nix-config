@@ -179,12 +179,16 @@
   security.polkit.enable = true;
 
   environment.systemPackages = with pkgs; [
-    neofetch
-    btop
-    git
+    #system
     xdg-desktop-portal-hyprland
     networkmanagerapplet
     networkmanager_dmenu
+    glib-networking
+
+    #utils
+    neofetch
+    btop
+    git
   ];
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
