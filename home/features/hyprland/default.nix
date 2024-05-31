@@ -22,10 +22,6 @@
       pkill mako
       mako &
 
-      # Waybar
-      pkill waybar
-      waybar --bar main-bar --log-level error
-
       # Others
       /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
       dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
