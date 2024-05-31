@@ -58,7 +58,9 @@
     libnotify
 
     polkit_gnome
-    python3
+    (python3.withPackages (p: with p; [
+      pygobject3 gst-python
+    ]))
   ];
 
   # Enable home-manager and git
