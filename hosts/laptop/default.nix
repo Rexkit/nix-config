@@ -107,6 +107,13 @@
       ];
       # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
       extraGroups = [ "networkmanager" "wheel" ];
+
+      packages = with pkgs; [
+        (python3.withPackages (subpkgs: with subpkgs; [
+          pip
+          pygobject3
+        ]))
+      ];
     };
   };
 
