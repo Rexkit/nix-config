@@ -2,6 +2,7 @@
   imports = [
     ./mako
     ./rofi
+    ./waybar
   ];
 
   xdg.portal = let
@@ -20,6 +21,10 @@
       # Mako (Notifications)
       pkill mako
       mako &
+
+      # Waybar
+      pkill waybar
+      waybar --bar main-bar --log-level error
 
       # Others
       /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
