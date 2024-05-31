@@ -285,7 +285,25 @@
         "animation slide up,wlogout"
       ];
 
+      "$rofi_launcher" = "~/.config/rofi/scripts/rofi_launcher";
+      "$rofi_runner" = "~/.config/rofi/scripts/rofi_runner";
+      "$rofi_music" = "~/.config/rofi/scripts/rofi_music";
+      "$rofi_network" = "~/.config/rofi/scripts/rofi_network";
+      "$rofi_bluetooth" = "~/.config/rofi/scripts/rofi_bluetooth";
+      "$rofi_powermenu" = "~/.config/rofi/scripts/rofi_powermenu";
+      "$rofi_screenshot" = "~/.config/rofi/scripts/rofi_screenshot"
+      "$rofi_asroot" = "~/.config/rofi/scripts/rofi_asroot";
+
       bind = [
+        "SUPER, D,       exec, $rofi_launcher"
+        "ALT, F1,        exec, $rofi_launcher"
+        "ALT, F2,        exec, $rofi_runner"  
+        "SUPER, R,       exec, $rofi_asroot"    
+        "SUPER, M,       exec, $rofi_music"    
+        "SUPER, N,       exec, $rofi_network"    
+        "SUPER, B,       exec, $rofi_bluetooth"  
+        "SUPER, X,       exec, $rofi_powermenu" 
+        "SUPER, A,       exec, $rofi_screenshot"
         "SUPER,       Return, exec, alacritty"
         "SUPER_SHIFT, Return, exec, alacritty -f"
         "SUPER,       T,      exec, alacritty -F"
@@ -368,6 +386,10 @@
         #Mouse Buttons
         "SUPER, mouse:272, movewindow"
         "SUPER, mouse:273, resizewindow"
+      ];
+
+      bindr = [
+        "SUPER, SUPER_L, exec, $rofi_launcher"
       ];
 
       exec-once = [
