@@ -17,6 +17,7 @@
     inputs.catppuccin.homeManagerModules.catppuccin
     inputs.nix-colors.homeManagerModules.default
     ../nixos/common/deploy_dots.nix
+    ./features/xdg
     ./features/fonts
     ./features/alacritty
     ./features/hyprland
@@ -26,6 +27,8 @@
     ./features/telegram
     ./features/remmina
     ./features/brave
+    ./features/mpd
+    ./features/mpv
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
@@ -54,6 +57,12 @@
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
   home.packages = with pkgs; [
+    #video
+    vlc-bin
+
+    #editor
+    geany
+
     # utils
     light
     wl-clipboard
