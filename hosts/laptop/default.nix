@@ -63,6 +63,11 @@
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   };
 
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+  };
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -192,11 +197,6 @@
       enable = true;
       package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     };
-  };
-
-  inputs.catppuccin = {
-    enable = true;
-    flavor = "mocha";
   };
 
   security.polkit.enable = true;
