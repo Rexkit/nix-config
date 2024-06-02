@@ -223,7 +223,7 @@
   qt = {
     enable = true;
     platformTheme = "qt5ct";
-    style.name = "kvantum";
+    style = "kvantum";
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
