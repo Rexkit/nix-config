@@ -69,12 +69,6 @@ background-color: @red;
 background-color: @yellow;
 }
 
-/** ********** CPU ********** **/
-#cpu {
-background-color: @cyan;
-margin-left: 6px;
-}
-
 /** ********** Memory ********** **/
 #memory {
 background-color: @magenta;
@@ -283,4 +277,10 @@ font-size: 16px;
 border-radius: 12px;
 margin: 6px 0px;
 padding: 2px 10px;
+}
+
+/** ********** CPU ********** **/
+#cpu {
+  background-color: @cyan;
+  margin-left: 6px;
 }
