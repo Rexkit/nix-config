@@ -16,7 +16,6 @@
     # ./nvim.nix
     inputs.catppuccin.homeManagerModules.catppuccin
     inputs.nix-colors.homeManagerModules.default
-    inputs.hyprland.homeManagerModules.default
     ../nixos/common/deploy_dots.nix
     ./features/fonts
     ./features/alacritty

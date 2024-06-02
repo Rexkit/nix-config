@@ -1,5 +1,6 @@
 { inputs, pkgs, lib, config, ... }: {
   imports = [
+    inputs.hyprland.homeManagerModules.default
     ./mako
     ./rofi
     ./waybar
@@ -53,7 +54,6 @@
 
     systemd.enable = true;
     systemd.variables = ["--all"];
-    xwayland.enable = true;
 
     settings = {
       monitor = ",preferred,auto,auto";
