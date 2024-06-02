@@ -205,7 +205,7 @@
     btop
     git
 
-    pkgs.catppuccin-sddm.override {
+    catppuccin-sddm.override {
       flavor = "mocha";
       font  = "Noto Sans";
       fontSize = "9";
