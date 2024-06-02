@@ -211,10 +211,19 @@
     neofetch
     btop
     git
+
+    #system
+    libsForQt5.qt5ct
   ];
 
   environment.sessionVariables = {
     QT_QPA_PLATFORMTHEME = "qt5ct";
+  };
+
+  qt = {
+    enable = true;
+    platformTheme = "qt5ct";
+    style.name = "kvantum";
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
