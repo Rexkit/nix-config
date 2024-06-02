@@ -93,7 +93,7 @@
   # Configure keymap in X11
   services = {
     xserver = {
-      enable = true;
+      enable = false;
       
       xkb = {
         layout = "us";
@@ -170,21 +170,23 @@
     pulse.enable = true;
   };
 
-  programs.xfconf = {
-    enable = true;
-  };
+  programs = {
+    xfconf = {
+      enable = true;
+    };
 
-  programs.dconf = {
-    enable = true;
-  };
+    dconf = {
+      enable = true;
+    };
 
-  programs.thunar = {
-    enable = true;
+    thunar = {
+      enable = true;
 
-    plugins = with pkgs.xfce; [
-      thunar-archive-plugin
-      thunar-volman
-    ];
+      plugins = with pkgs.xfce; [
+        thunar-archive-plugin
+        thunar-volman
+      ];
+    };
   };
 
   security.polkit.enable = true;

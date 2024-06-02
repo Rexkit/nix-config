@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }: {
+{ inputs, pkgs, lib, config, ... }: {
   imports = [
     ./mako
     ./rofi
@@ -49,6 +49,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
 
     systemd.enable = true;
     systemd.variables = ["--all"];
