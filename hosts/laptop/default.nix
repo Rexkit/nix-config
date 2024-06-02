@@ -194,6 +194,11 @@
     };
   };
 
+  inputs.catppuccin = {
+    enable = true;
+    flavor = "mocha";
+  };
+
   security.polkit.enable = true;
 
   fonts.fontDir.enable = true;
