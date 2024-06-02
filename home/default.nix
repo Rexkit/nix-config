@@ -47,6 +47,12 @@
     };
   };
 
+  qt = {
+    enable = true;
+    platformTheme.name = "qtct";
+    style.name = "kvantum";
+  };
+
   xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
   # TODO: Set your username
