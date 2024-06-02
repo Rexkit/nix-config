@@ -217,6 +217,15 @@
     QT_QPA_PLATFORMTHEME = "qt5ct";
   };
 
+  qt = {
+    enable = true;
+    platformTheme = "qtct";
+    style = {
+      package = pkgs.catppuccin-kvantum;
+      name = "Catppuccin-Mocha-Mauve";
+    };
+  };
+
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.11";
 }
