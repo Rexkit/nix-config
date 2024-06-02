@@ -6,16 +6,16 @@
     ./waybar
   ];
 
-  xdg.portal = let
-    hyprland = inputs.hyprland.packages.${pkgs.system}.hyprland;
-    xdph = pkgs.xdg-desktop-portal-hyprland.override {inherit hyprland;};
-  in {
-    extraPortals = [
-      pkgs.xdg-desktop-portal-wlr
-      xdph
-    ];
-    configPackages = [hyprland];
-  };
+  # xdg.portal = let
+  #   hyprland = inputs.hyprland.packages.${pkgs.system}.hyprland;
+  #   xdph = pkgs.xdg-desktop-portal-hyprland.override {inherit hyprland;};
+  # in {
+  #   extraPortals = [
+  #     pkgs.xdg-desktop-portal-wlr
+  #     xdph
+  #   ];
+  #   configPackages = [hyprland];
+  # };
 
   home.packages = with pkgs; [
     (writeShellScriptBin "autostart" ''
