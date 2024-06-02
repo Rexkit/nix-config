@@ -6,16 +6,16 @@
     ./waybar
   ];
 
-  # xdg.portal = let
-  #   hyprland = inputs.hyprland.packages.${pkgs.system}.hyprland;
-  #   xdph = pkgs.xdg-desktop-portal-hyprland.override {inherit hyprland;};
-  # in {
-  #   extraPortals = [
-  #     pkgs.xdg-desktop-portal-wlr
-  #     xdph
-  #   ];
-  #   configPackages = [hyprland];
-  # };
+  xdg.portal = let
+    hyprland = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    xdph = pkgs.xdg-desktop-portal-hyprland.override {inherit hyprland;};
+  in {
+    extraPortals = [
+      pkgs.xdg-desktop-portal-wlr
+      xdph
+    ];
+    configPackages = [hyprland];
+  };
 
   home.packages = with pkgs; [
     (writeShellScriptBin "autostart" ''
@@ -93,9 +93,9 @@
         "col.inactive_border" = "$inactive_border_col_1 $inactive_border_col_2 $gradient_angle";
         "col.nogroup_border" = "$group_border_col";
         "col.nogroup_border_active" = "$group_border_active_col";
-        cursor_inactive_timeout = 30;
+        # cursor_inactive_timeout = 30;
         layout = "dwindle";
-        no_cursor_warps = false;
+        # no_cursor_warps = false;
         no_focus_fallback = false;
         apply_sens_to_raw = false;
         resize_on_border = true;
