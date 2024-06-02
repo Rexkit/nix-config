@@ -219,7 +219,7 @@
 
   qt = {
     enable = true;
-    platformTheme = "qtct";
+    platformTheme = "qt5ct";
     style = {
       package = pkgs.catppuccin-kvantum;
       name = "Catppuccin-Mocha-Mauve";
