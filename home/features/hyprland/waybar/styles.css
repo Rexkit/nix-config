@@ -72,6 +72,7 @@ background-color: @yellow;
 /** ********** CPU ********** **/
 #cpu {
 background-color: @cyan;
+margin-left: 6px;
 }
 
 /** ********** Memory ********** **/
