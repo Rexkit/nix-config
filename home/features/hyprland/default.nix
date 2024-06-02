@@ -7,7 +7,7 @@
   ];
 
   xdg.portal = let
-    hyprland = config.wayland.windowManager.hyprland.package;
+    hyprland = inputs.hyprland.packages.${pkgs.system}.hyprland;
     xdph = pkgs.xdg-desktop-portal-hyprland.override {inherit hyprland;};
   in {
     extraPortals = [
