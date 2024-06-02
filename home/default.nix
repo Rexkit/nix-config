@@ -6,13 +6,7 @@
   config,
   pkgs,
   ...
-}: let
-    variant = "Mocha";
-    accent = "Mauve";
-    kvantumThemePackage = pkgs.catppuccin-kvantum.override {
-      inherit variant accent;
-    };
-  in {
+}: {
   # You can import other home-manager modules here
   imports = [
     # If you want to use home-manager modules from other flakes (such as nix-colors):
@@ -53,23 +47,6 @@
     };
   };
 
-  qt = {
-    enable = true;
-    platformTheme.name = "qtct";
-    style.name = "kvantum";
-  };
-
-  xdg.configFile = {
-    "Kvantum/kvantum.kvconfig".text = ''
-      [General]
-      theme=Catppuccin-${variant}-${accent}
-    '';
-
-    # The important bit is here, links the theme directory from the package to a directory under `~/.config`
-    # where Kvantum should find it.
-    "Kvantum/Catppuccin-${variant}-${accent}".source = "${kvantumThemePackage}/share/Kvantum/Catppuccin-${variant}-${accent}";
-  };
-
   systemd.user.services.xdg-desktop-portal-hyprland.serviceConfig.PassEnvironment =
       [ "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP" "QT_QPA_PLATFORMTHEME" "PATH" ];
 
@@ -103,7 +80,23 @@
     xdg-desktop-portal-hyprland
     networkmanager_dmenu
     networkmanagerapplet
+    (catppuccin-kvantum.override {
+      accent = "Mocha";
+      variant = "Mauve";
+    })
+    libsForQt5.qtstyleplugin-kvantum
+    libsForQt5.qt5ct
   ];
+
+  qt = {
+    enable = true;
+    platformTheme = "qtct";
+    style.name = "kvantum";
+  };
+
+  xdg.configFile."Kvantum/kvantum.kvconfig".source = (pkgs.formats.ini { }).generate "kvantum.kvconfig" {
+    General.theme = "Catppuccin-Mocha-Mauve";
+  };
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
