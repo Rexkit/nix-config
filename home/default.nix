@@ -58,7 +58,7 @@
   # programs.neovim.enable = true;
   home.packages = with pkgs; [
     #video
-    vlc-bin
+    vlc
 
     #editor
     geany
