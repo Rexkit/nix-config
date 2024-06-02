@@ -1,6 +1,5 @@
 { inputs, pkgs, lib, config, ... }: {
   imports = [
-    inputs.hyprland.homeManagerModules.default
     ./mako
     ./rofi
     ./waybar
