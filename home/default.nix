@@ -73,13 +73,6 @@
   programs.home-manager.enable = true;
   programs.git.enable = true;
 
-  programs = {
-    hyprland = {
-      enable = true;
-      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-    };
-  };
-
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
