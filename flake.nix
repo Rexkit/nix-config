@@ -19,6 +19,7 @@
     nixpkgs,
     home-manager,
     hyprland,
+    catppuccin,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -31,6 +32,7 @@
         # > Our main nixos configuration file <
         modules = [
           ./hosts/laptop
+          catppuccin.nixosModules.catppuccin
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
