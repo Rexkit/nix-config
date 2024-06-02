@@ -6,7 +6,13 @@
   config,
   pkgs,
   ...
-}: {
+}: let
+    variant = "Mocha";
+    accent = "Mauve";
+    kvantumThemePackage = pkgs.catppuccin-kvantum.override {
+      inherit variant accent;
+    };
+  in {
   # You can import other home-manager modules here
   imports = [
     # If you want to use home-manager modules from other flakes (such as nix-colors):
@@ -51,6 +57,17 @@
     enable = true;
     platformTheme.name = "qtct";
     style.name = "kvantum";
+  };
+
+  xdg.configFile = {
+    "Kvantum/kvantum.kvconfig".text = ''
+      [General]
+      theme=Catppuccin-${variant}-${accent}
+    '';
+
+    # The important bit is here, links the theme directory from the package to a directory under `~/.config`
+    # where Kvantum should find it.
+    "Kvantum/Catppuccin-${variant}-${accent}".source = "${kvantumThemePackage}/share/Kvantum/Catppuccin-${variant}-${accent}";
   };
 
   xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
