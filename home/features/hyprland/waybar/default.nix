@@ -22,7 +22,7 @@
 
         modules-left = [ "cpu" "memory" "disk" "idle_inhibitor" ];
         modules-center = [ "hyprland/workspaces" "tray" ];
-        modules-right = [ "pulseaudio" "backlight" "bluetooth" "network" "battery" "clock" "custom/power" ];
+        modules-right = [ "pulseaudio" "backlight" "network" "battery" "clock" "custom/power" ];
 
         "backlight" = {
           interval = 2;
