@@ -81,8 +81,8 @@
     networkmanager_dmenu
     networkmanagerapplet
     (catppuccin-kvantum.override {
-      accent = "Mocha";
-      variant = "Mauve";
+      accent = "Mauve";
+      variant = "Mocha";
     })
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qt5ct
