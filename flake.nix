@@ -37,6 +37,7 @@
             home-manager.users.nkuzin = import ./home;
             home-manager.extraSpecialArgs = { inherit inputs outputs; };
           }
+          hyprland.nixosModules.default
         ];
       };
     };
