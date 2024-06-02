@@ -9,6 +9,7 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    inputs.hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     nix-colors.url = "github:misterio77/nix-colors";
     catppuccin.url = "github:catppuccin/nix";
   };
