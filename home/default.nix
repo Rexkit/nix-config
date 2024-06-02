@@ -70,6 +70,9 @@
     "Kvantum/Catppuccin-${variant}-${accent}".source = "${kvantumThemePackage}/share/Kvantum/Catppuccin-${variant}-${accent}";
   };
 
+  systemd.user.services.xdg-desktop-portal-hyprland.serviceConfig.PassEnvironment =
+      [ "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP" "QT_QPA_PLATFORMTHEME" "PATH" ];
+
   xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
   # TODO: Set your username
