@@ -34,6 +34,11 @@
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
 
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+  };
+
   gtk = {
     enable = true;
 
