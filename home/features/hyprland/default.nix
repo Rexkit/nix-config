@@ -32,6 +32,10 @@
       dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
     '')
 
+    (writeShellScriptBin "wallpaper" ''
+      swaybg --output '*' --mode fill --image "$HOME/.config/hypr/wallpapers/wallpaper.png"
+    '')
+
     (writeShellScriptBin "alacritty_script" ''
       if [ "$1" == "-f" ]; then
         alacritty --class 'alacritty-float,alacritty-float'
@@ -446,6 +450,7 @@
 
       exec-once = [
         "autostart"
+        "wallpaper"
       ];
     };
   };
