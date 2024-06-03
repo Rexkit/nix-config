@@ -3,6 +3,9 @@
     ./mako
     ./rofi
     ./waybar
+    ./hyprlock
+    ./swaylock
+    ./wlogout
   ];
 
   xdg.portal = let
@@ -311,8 +314,16 @@
       "$rofi_powermenu" = "~/.config/rofi/scripts/rofi_powermenu";
       "$rofi_screenshot" = "~/.config/rofi/scripts/rofi_screenshot";
       "$rofi_asroot" = "~/.config/rofi/scripts/rofi_asroot";
-
-      "$editor" = "alacritty_script";
+      "$volume"     = ~/.config/hypr/scripts/volume
+      "$backlight"   = "~/.config/hypr/scripts/brightness"
+      "$screenshot"  = "~/.config/hypr/scripts/screenshot"
+      "$lockscreen"  = "~/.config/hypr/scripts/lockscreen"
+      "$wlogout"     = "~/.config/hypr/scripts/wlogout"
+      "$colorpicker" = "~/.config/hypr/scripts/colorpicker"
+      "$files"       = "thunar"
+      "$editor"      = "geany"
+      "$browser"     = "floorp"
+      "$alacritty" = "alacritty_script";
 
       bind = [
         "SUPER, D,       exec, $rofi_launcher"
@@ -324,12 +335,15 @@
         "SUPER, B,       exec, $rofi_bluetooth"  
         "SUPER, X,       exec, $rofi_powermenu" 
         "SUPER, A,       exec, $rofi_screenshot"
-        "SUPER,       Return, exec, $editor"
-        "SUPER_SHIFT, Return, exec, $editor -f"
-        "SUPER,       T,      exec, $editor -F"
+        "SUPER,       Return, exec, $alacritty"
+        "SUPER_SHIFT, Return, exec, $alacritty -f"
+        "SUPER,       T,      exec, $alacritty -F"
 
-        "SUPER_SHIFT, W, exec, floorp"
-        "SUPER_SHIFT, F, exec, thunar"
+        "SUPER_SHIFT, W, exec, $browser"
+        "SUPER_SHIFT, F, exec, $files"
+
+        "SUPER,    P, exec, $colorpicker"
+        "CTRL_ALT, L, exec, hyprlock"
 
         "SUPER,       Q,      killactive,"
         "SUPER,       C,      killactive,"
@@ -340,6 +354,25 @@
         "SUPER,       S,      exec, $notifycmd 'Pseudo Mode'"
         "SUPER,       Space,  togglefloating,"
         "SUPER,       Space,  centerwindow,"
+
+        # -- Function keys --
+        ",XF86MonBrightnessUp,   exec, $backlight --inc"
+        ",XF86MonBrightnessDown, exec, $backlight --dec"
+        ",XF86AudioRaiseVolume,  exec, $volume --inc"
+        ",XF86AudioLowerVolume,  exec, $volume --dec"
+        ",XF86AudioMute,         exec, $volume --toggle"
+        ",XF86AudioMicMute,      exec, $volume --toggle-mic"
+        ",XF86AudioNext,         exec, mpc next"
+        ",XF86AudioPrev,         exec, mpc prev"
+        ",XF86AudioPlay,         exec, mpc toggle"
+        ",XF86AudioStop,         exec, mpc stop"
+
+        # -- Screenshots --
+        ",      Print, exec, $screenshot --now"
+        "ALT,   Print, exec, $screenshot --in5"
+        "SHIFT, Print, exec, $screenshot --in10"
+        "CTRL,  Print, exec, $screenshot --win"
+        "SUPER, Print, exec, $screenshot --area"
 
         # Change Focus
         "SUPER, left,  movefocus, l"
@@ -410,6 +443,10 @@
 
       bindr = [
         "SUPER, SUPER_L, exec, $rofi_launcher"
+      ];
+
+      bindl = [
+        ",switch:Lid Switch, exec, $lockscreen"
       ];
 
       exec-once = [

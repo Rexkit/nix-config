@@ -10,6 +10,16 @@
     recursive = false;
   };
 
+  home.file."${config.xdg.configHome}/mako/icons" = {
+    source = ../.. + "/common" + /mako/icons;
+    recursive = true;
+  };
+
+  home.file."${config.xdg.configHome}/hypr/scripts" = {
+    source = ../.. + "/common" + /hypr;
+    recursive = true;
+  };
+
   home.file.".local/share/fonts" = {
     source = ../.. + "/common" + /fonts;
     recursive = true;

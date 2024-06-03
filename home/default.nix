@@ -68,8 +68,12 @@
     geany
 
     # utils
+    pulsemixer
     light
+    grim
+    slurp
     wl-clipboard
+    wl-copy
     wl-screenrec
     wlr-randr
     libnotify
