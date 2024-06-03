@@ -92,7 +92,6 @@
     wlr-randr
     libnotify
     sops
-    xarchiver
     unzip
 
     #system
