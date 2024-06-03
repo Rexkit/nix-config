@@ -37,31 +37,31 @@ countdown () {
 
 # take shots
 shotnow () {
-	cd ${dir} && sleep 0.5 && grim - | swappy -f - | tee "$file" | wl-copy
+	cd ${dir} && sleep 0.5 && grim - | swappy -f - -o - | tee "$file" | wl-copy
 	notify_view
 }
 
 shot5 () {
 	countdown '5'
-	sleep 1 && cd ${dir} && grim - | swappy -f - | tee "$file" | wl-copy
+	sleep 1 && cd ${dir} && grim - | swappy -f - -o - | tee "$file" | wl-copy
 	notify_view
 }
 
 shot10 () {
 	countdown '10'
-	sleep 1 && cd ${dir} && grim - | swappy -f - | tee "$file" | wl-copy
+	sleep 1 && cd ${dir} && grim - | swappy -f - -o - | tee "$file" | wl-copy
 	notify_view
 }
 
 shotwin () {
 	w_pos=`hyprctl activewindow | grep 'at:' | cut -d':' -f2 | tr -d ' ' | tail -n1`
 	w_size=`hyprctl activewindow | grep 'size:' | cut -d':' -f2 | tr -d ' ' | tail -n1 | sed s/,/x/g`
-	cd ${dir} && grim -g "$w_pos $w_size" - | swappy -f - | tee "$file" | wl-copy
+	cd ${dir} && grim -g "$w_pos $w_size" - | swappy -f - -o - | tee "$file" | wl-copy
 	notify_view
 }
 
 shotarea () {
-	cd ${dir} && grim -g "$(slurp -b ${background:1}CC -c ${accent:1}ff -s ${accent:1}0D -w 4 && sleep 0.3)" - | swappy -f - | tee "$file" | wl-copy
+	cd ${dir} && grim -g "$(slurp -b ${background:1}CC -c ${accent:1}ff -s ${accent:1}0D -w 4 && sleep 0.3)" - | swappy -f - -o - | tee "$file" | wl-copy
 	notify_view
 }
 
