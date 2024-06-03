@@ -20,6 +20,7 @@
     ../nixos/common/deploy_dots.nix
     ./features/xdg
     ./features/fonts
+    ./features/zsh
     ./features/alacritty
     ./features/hyprland
     ./features/vsc

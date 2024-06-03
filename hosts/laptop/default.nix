@@ -115,16 +115,20 @@
     };
   };
 
-  users.users = {
-    nkuzin = {
-      initialPassword = "123456";
-      isNormalUser = true;
-      openssh.authorizedKeys.keys = [
-        # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
-      ];
-      # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
-      extraGroups = [ "networkmanager" "wheel" ];
+  users = {
+    users = {
+      nkuzin = {
+        initialPassword = "123456";
+        isNormalUser = true;
+        openssh.authorizedKeys.keys = [
+          # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
+        ];
+        # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
+        extraGroups = [ "networkmanager" "wheel" ];
+      };
     };
+
+    defaultUserShell = pkgs.zsh;
   };
 
   # This setups a SSH server. Very important if you're setting up a headless system.
@@ -180,6 +184,10 @@
 
   programs = {
     xfconf = {
+      enable = true;
+    };
+
+    zsh = {
       enable = true;
     };
 
