@@ -22,6 +22,7 @@
     (writeShellScriptBin "autostart" ''
       # Mako (Notifications)
       pkill mako
+      pkill waybar
       mako &
 
       swaybg --output '*' --mode fill --image "$HOME/.config/hypr/wallpapers/wallpaper.png"
