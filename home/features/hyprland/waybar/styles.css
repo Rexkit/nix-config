@@ -64,11 +64,6 @@ background-color: @red;
   animation-direction: alternate;
 }
 
-/** ********** Clock ********** **/
-#clock {
-background-color: @yellow;
-}
-
 /** ********** Memory ********** **/
 #memory {
 background-color: @magenta;
@@ -283,4 +278,10 @@ padding: 2px 10px;
 #cpu {
   background-color: @cyan;
   margin-left: 6px;
+}
+
+/** ********** Clock ********** **/
+#clock {
+  background-color: @yellow;
+  margin-right: 6px;
 }
