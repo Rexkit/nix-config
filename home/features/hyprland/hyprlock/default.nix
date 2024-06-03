@@ -39,12 +39,12 @@
           font_color = "rgb(186, 194, 222)";
           fade_on_empty = true;
           fade_timeout = 1000;
-          placeholder_text = '\'<i>Enter Password</i>'\';
+          placeholder_text = "<i>Enter Password</i>";
           hide_input = false;
           rounding = 24;
           check_color = "rgb(137, 180, 250)";
           fail_color = "rgb(243, 139, 168)";
-          fail_text = '\'<i>$FAIL <b>($ATTEMPTS)</b></i>'\';
+          fail_text = "<i>$FAIL <b>($ATTEMPTS)</b></i>";
           fail_transition = 300;
           capslock_color = -1;
           numlock_color = -1;
@@ -80,7 +80,7 @@
           shadow_boost = 1.0;
         }
         {
-          text = '\'Hi <span foreground="##F38BA8"> <b>$USER</b></span> '\';
+          text = "Hi <span foreground='##F38BA8'> <b>$USER</b></span> ";
           color = "rgb(186, 194, 222)";
           font_size = 24;
           font_family = "Iosevka";
@@ -95,7 +95,7 @@
           shadow_boost = 0.50;
         }
         {
-          text = '\'<span foreground="##F38BA8"></span>'\';
+          text = "<span foreground='##F38BA8'></span>";
           color = rgb(186, 194, 222);
           font_size = 64;
           font_family = "Iosevka";
