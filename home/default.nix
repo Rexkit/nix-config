@@ -33,6 +33,13 @@
     ./features/mpv
   ];
 
+  sops.defaultSopsFile = ./secrets/secrets.yaml;
+  sops.defaultSopsFormat = "yaml";
+
+  sops.age.keyFile = "/home/nkuzin/.config/sops/age/keys.txt";
+
+  sops.secrets.github_token = { };
+
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
 
   catppuccin = {
