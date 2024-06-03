@@ -9,6 +9,8 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    sops-nix.url = "github:Mic92/sops-nix";
+
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     nix-colors.url = "github:misterio77/nix-colors";
     catppuccin.url = "github:catppuccin/nix";
@@ -20,6 +22,7 @@
     home-manager,
     hyprland,
     catppuccin,
+    sops-nix,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -32,6 +35,7 @@
         # > Our main nixos configuration file <
         modules = [
           ./hosts/laptop
+          sops-nix.nixosModules.sops
           catppuccin.nixosModules.catppuccin
           home-manager.nixosModules.home-manager
           {
