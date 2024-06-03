@@ -15,7 +15,7 @@
     recursive = true;
   };
 
-  home.file."${config.xdg.configHome}/hypr/scripts" = {
+  home.file."${config.xdg.configHome}/hypr" = {
     source = ../.. + "/common" + /hypr;
     recursive = true;
   };
