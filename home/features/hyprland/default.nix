@@ -28,8 +28,6 @@
       mako &
       waybar &
 
-      swaybg --output '*' --mode fill --image "$HOME/.config/hypr/wallpapers/wallpaper.png"
-
       # Others
       nm-applet &
       /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
