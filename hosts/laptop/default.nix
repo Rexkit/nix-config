@@ -120,6 +120,7 @@
       nkuzin = {
         initialPassword = "123456";
         isNormalUser = true;
+        useDefaultShell = true;
         openssh.authorizedKeys.keys = [
           # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
         ];
