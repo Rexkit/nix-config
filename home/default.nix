@@ -92,6 +92,8 @@
     wlr-randr
     libnotify
     sops
+    xarchiver
+    unzip
 
     #system
     xdg-user-dirs
