@@ -74,6 +74,7 @@
     light
     grim
     swappy
+    swaybg
     slurp
     wl-clipboard    
     wl-screenrec
