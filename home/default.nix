@@ -14,6 +14,7 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
+    inputs.sops-nix.homeManagerModules.sops
     inputs.hyprland.homeManagerModules.default
     inputs.catppuccin.homeManagerModules.catppuccin
     inputs.nix-colors.homeManagerModules.default
@@ -33,12 +34,15 @@
     ./features/mpv
   ];
 
-  sops.defaultSopsFile = ./secrets/secrets.yaml;
-  sops.defaultSopsFormat = "yaml";
+  sops = {
+    defaultSopsFile = ./secrets/secrets.yaml;
+    defaultSopsFormat = "yaml";
+    age.keyFile = "/home/nkuzin/.config/sops/age/keys.txt";
 
-  sops.age.keyFile = "/home/nkuzin/.config/sops/age/keys.txt";
-
-  sops.secrets.github_token = { };
+    secrets = {
+      github_token = { };
+    };
+  };
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
 
@@ -110,7 +114,11 @@
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
-  programs.git.enable = true;
+  programs.git = {
+    enable = true;
+    userName  = "Nikita Kuzin";
+    userEmail = "ptznikko@gmail.com";
+  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

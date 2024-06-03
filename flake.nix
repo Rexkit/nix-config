@@ -35,7 +35,6 @@
         # > Our main nixos configuration file <
         modules = [
           ./hosts/laptop
-          sops-nix.nixosModules.sops
           catppuccin.nixosModules.catppuccin
           home-manager.nixosModules.home-manager
           {
