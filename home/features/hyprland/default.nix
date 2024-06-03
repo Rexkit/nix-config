@@ -21,12 +21,8 @@
   home.packages = with pkgs; [
     (writeShellScriptBin "autostart" ''
       # Kill already running process
-      _ps=(waybar mako)
-      for _prs in "${_ps[@]}"; do
-        if [[ `pidof ${_prs}` ]]; then
-          killall -9 ${_prs}
-        fi
-      done
+      killall mako
+      killall waybar
 
       # Mako (Notifications)
       mako &
