@@ -115,6 +115,9 @@
       cursor = {
         no_warps = false;
         inactive_timeout = 30;
+        zoom_factor = 1.0;
+        zoom_rigid = false;
+        hide_on_touch = true;
       };
 
       decoration = {
@@ -276,12 +279,9 @@
         enable_swallow = false;
         focus_on_activate = true;
         no_direct_scanout = false;
-        hide_cursor_on_touch = true;
         mouse_move_focuses_monitor = true;
         render_ahead_of_time = false;
         render_ahead_safezone = 1;
-        cursor_zoom_factor = 1.0;
-        cursor_zoom_rigid = false;
         allow_session_lock_restore = false;
         background_color = "0x000000";
         close_special_on_empty = true;
