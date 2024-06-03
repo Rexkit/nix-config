@@ -72,6 +72,7 @@
     pulsemixer
     light
     grim
+    swappy
     slurp
     wl-clipboard    
     wl-screenrec
