@@ -72,8 +72,7 @@
     light
     grim
     slurp
-    wl-clipboard
-    wl-copy
+    wl-clipboard    
     wl-screenrec
     wlr-randr
     libnotify
