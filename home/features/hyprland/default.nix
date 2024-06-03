@@ -21,8 +21,8 @@
   home.packages = with pkgs; [
     (writeShellScriptBin "autostart" ''
       # Kill already running process
-      killall mako
-      killall waybar
+      kill mako
+      kill waybar
 
       # Mako (Notifications)
       mako &
