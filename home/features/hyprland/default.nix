@@ -314,15 +314,15 @@
       "$rofi_powermenu" = "~/.config/rofi/scripts/rofi_powermenu";
       "$rofi_screenshot" = "~/.config/rofi/scripts/rofi_screenshot";
       "$rofi_asroot" = "~/.config/rofi/scripts/rofi_asroot";
-      # "$volume"     = ~/.config/hypr/scripts/volume
-      "$backlight"   = "~/.config/hypr/scripts/brightness"
-      "$screenshot"  = "~/.config/hypr/scripts/screenshot"
-      "$lockscreen"  = "~/.config/hypr/scripts/lockscreen"
-      "$wlogout"     = "~/.config/hypr/scripts/wlogout"
-      "$colorpicker" = "~/.config/hypr/scripts/colorpicker"
-      "$files"       = "thunar"
-      "$editor"      = "geany"
-      "$browser"     = "floorp"
+      "$volume"     = "~/.config/hypr/scripts/volume";
+      "$backlight"   = "~/.config/hypr/scripts/brightness";
+      "$screenshot"  = "~/.config/hypr/scripts/screenshot";
+      "$lockscreen"  = "~/.config/hypr/scripts/lockscreen";
+      "$wlogout"     = "~/.config/hypr/scripts/wlogout";
+      "$colorpicker" = "~/.config/hypr/scripts/colorpicker";
+      "$files"       = "thunar";
+      "$editor"      = "geany";
+      "$browser"     = "floorp";
       "$alacritty" = "alacritty_script";
 
       bind = [
