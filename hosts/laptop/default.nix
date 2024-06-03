@@ -228,6 +228,9 @@
     neofetch
     btop
     git
+    networkmanager-openvpn
+    openvpn
+    networkmanagerapplet
 
     #system
     libsForQt5.qt5ct
