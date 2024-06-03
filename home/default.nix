@@ -80,6 +80,7 @@
     wl-screenrec
     wlr-randr
     libnotify
+    sops
 
     #system
     xdg-user-dirs
