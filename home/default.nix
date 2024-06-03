@@ -100,6 +100,8 @@
     polkit_gnome
     xdg-desktop-portal-hyprland
     networkmanager_dmenu
+    networkmanager-openvpn
+    openvpn
     networkmanagerapplet
     (catppuccin-kvantum.override {
       accent = "Mauve";
