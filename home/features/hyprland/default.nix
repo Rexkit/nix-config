@@ -260,6 +260,34 @@
         };
       };
 
+      misc = {
+        disable_hyprland_logo = true;
+        disable_splash_rendering = false;
+        force_default_wallpaper = 0;
+        vfr = "on";
+        vrr = 0;
+        mouse_move_enables_dpms = false;
+        key_press_enables_dpms = false;
+        always_follow_on_dnd = true;
+        layers_hog_keyboard_focus = true;
+        animate_manual_resizes = false;
+        animate_mouse_windowdragging = false;
+        disable_autoreload = false;
+        enable_swallow = false;
+        focus_on_activate = true;
+        no_direct_scanout = false;
+        hide_cursor_on_touch = true;
+        mouse_move_focuses_monitor = true;
+        render_ahead_of_time = false;
+        render_ahead_safezone = 1;
+        cursor_zoom_factor = 1.0;
+        cursor_zoom_rigid = false;
+        allow_session_lock_restore = false;
+        background_color = "0x000000";
+        close_special_on_empty = true;
+        new_window_takes_over_fullscreen = 0;
+      };
+
       binds = {
         pass_mouse_when_bound = false;
         scroll_event_delay = 300;
