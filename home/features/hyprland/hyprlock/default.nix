@@ -28,7 +28,7 @@
 
       input-field = [
         {
-          size = 250, 50;
+          size = "250, 50";
           outline_thickness = 4;
           dots_size = 0.35;
           dots_spacing = 0.25;
