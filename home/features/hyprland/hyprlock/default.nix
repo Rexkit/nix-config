@@ -96,7 +96,7 @@
         }
         {
           text = "<span foreground='##F38BA8'></span>";
-          color = rgb(186, 194, 222);
+          color = "rgb(186, 194, 222)";
           font_size = 64;
           font_family = "Iosevka";
 
