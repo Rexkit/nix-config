@@ -314,7 +314,7 @@
       "$rofi_powermenu" = "~/.config/rofi/scripts/rofi_powermenu";
       "$rofi_screenshot" = "~/.config/rofi/scripts/rofi_screenshot";
       "$rofi_asroot" = "~/.config/rofi/scripts/rofi_asroot";
-      "$volume"     = ~/.config/hypr/scripts/volume
+      # "$volume"     = ~/.config/hypr/scripts/volume
       "$backlight"   = "~/.config/hypr/scripts/brightness"
       "$screenshot"  = "~/.config/hypr/scripts/screenshot"
       "$lockscreen"  = "~/.config/hypr/scripts/lockscreen"
