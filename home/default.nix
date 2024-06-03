@@ -79,6 +79,7 @@
     libnotify
 
     #system
+    xdg-user-dirs
     freerdp3
     polkit_gnome
     xdg-desktop-portal-hyprland
