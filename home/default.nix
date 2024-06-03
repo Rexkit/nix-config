@@ -68,6 +68,7 @@
     geany
 
     # utils
+    viewnior
     pulsemixer
     light
     grim

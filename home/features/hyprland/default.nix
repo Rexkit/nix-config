@@ -5,7 +5,6 @@
     ./waybar
     ./hyprlock
     ./swaylock
-    ./wlogout
   ];
 
   xdg.portal = let
@@ -317,8 +316,6 @@
       "$volume"     = "~/.config/hypr/scripts/volume";
       "$backlight"   = "~/.config/hypr/scripts/brightness";
       "$screenshot"  = "~/.config/hypr/scripts/screenshot";
-      "$lockscreen"  = "~/.config/hypr/scripts/lockscreen";
-      "$wlogout"     = "~/.config/hypr/scripts/wlogout";
       "$colorpicker" = "~/.config/hypr/scripts/colorpicker";
       "$files"       = "thunar";
       "$editor"      = "geany";
@@ -443,10 +440,6 @@
 
       bindr = [
         "SUPER, SUPER_L, exec, $rofi_launcher"
-      ];
-
-      bindl = [
-        ",switch:Lid Switch, exec, $lockscreen"
       ];
 
       exec-once = [
