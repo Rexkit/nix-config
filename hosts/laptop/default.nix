@@ -234,6 +234,7 @@
 
     #system
     libsForQt5.qt5ct
+    gnome.gnome-keyring
   ];
 
   environment.sessionVariables = {
