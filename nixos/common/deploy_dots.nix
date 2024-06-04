@@ -20,6 +20,11 @@
     recursive = true;
   };
 
+  home.file."${config.xdg.configHome}/geany/colorschemes" = {
+    source = ../.. + "/common" + /geany/colorschemes;
+    recursive = true;
+  };
+
   home.file.".local/share/fonts" = {
     source = ../.. + "/common" + /fonts;
     recursive = true;
