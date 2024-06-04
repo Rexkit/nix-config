@@ -77,8 +77,6 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  networking.networkmanager.dns = "systemd-resolved";
-
   # Set your time zone.
   time.timeZone = "Europe/Moscow";
 
@@ -222,10 +220,6 @@
   services.tumbler.enable = true; # Thumbnail support for images
 
   security.polkit.enable = true;
-
-  services.resolved = {
-    enable = true;
-  };
 
   fonts.fontDir.enable = true;
 
