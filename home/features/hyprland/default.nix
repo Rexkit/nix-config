@@ -288,6 +288,20 @@
         new_window_takes_over_fullscreen = 0;
       };
 
+      master = {
+        allow_small_split = false;
+        special_scale_factor = 0.8;
+        mfact = 0.55;
+        new_is_master = true;
+        new_on_top = false;
+        no_gaps_when_only = false;
+        orientation = "left";
+        inherit_fullscreen = true;
+        always_center_master = false;
+        smart_resizing = true;
+        drop_at_cursor = true;
+      };
+
       binds = {
         pass_mouse_when_bound = false;
         scroll_event_delay = 300;
