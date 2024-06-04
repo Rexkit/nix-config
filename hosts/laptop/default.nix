@@ -76,7 +76,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  services.resolved.enable = true;
+  networking.networkmanager.dns = "systemd-resolved";
 
   # Set your time zone.
   time.timeZone = "Europe/Moscow";
