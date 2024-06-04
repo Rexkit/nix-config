@@ -63,6 +63,8 @@
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   };
 
+  inputs.nixos-hardware.nixosModules.asus-zephyrus-gu603h;
+
   catppuccin = {
     enable = true;
     flavor = "mocha";
@@ -166,16 +168,6 @@
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
-
-  hardware.nvidia.prime = {
-    offload = {
-			enable = true;
-			enableOffloadCmd = true;
-		};
-
-		intelBusId = "0@0:2:0";
-		nvidiaBusId = "1@0:0:0";
-	};
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
