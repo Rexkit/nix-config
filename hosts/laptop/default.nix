@@ -226,22 +226,37 @@
 
   fonts.fontDir.enable = true;
 
-  environment.systemPackages = with pkgs; [
-    #utils
-    neofetch
-    btop
-    git
-    networkmanager-openvpn
-    openvpn
-    networkmanagerapplet
+  environment = {
+    variables = {
+      LIBVA_DRIVER_NAME = "nvidia";
+      XDG_SESSION_TYPE = "wayland";
+      GBM_BACKEND = "nvidia-drm";
+      __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+      __GL_GSYNC_ALLOWED = "1";
+      __GL_VRR_ALLOWED = "0"; # Controls if Adaptive Sync should be used. Recommended to set as “0” to avoid having problems on some games.
+      QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+      QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+    };
+    
+    sessionVariables = {
+      QT_QPA_PLATFORMTHEME = "qt5ct";
+      NIXOS_OZONE_WL = "1"; # Hint electron apps to use wayland
+      WLR_NO_HARDWARE_CURSORS = "1"; # Fix cursor rendering issue on wlr nvidia.
+    };
 
-    #system
-    libsForQt5.qt5ct
-    gnome.gnome-keyring
-  ];
+    systemPackages = with pkgs; [
+      #utils
+      neofetch
+      btop
+      git
+      networkmanager-openvpn
+      openvpn
+      networkmanagerapplet
 
-  environment.sessionVariables = {
-    QT_QPA_PLATFORMTHEME = "qt5ct";
+      #system
+      libsForQt5.qt5ct
+      gnome.gnome-keyring
+    ];
   };
 
   qt = {
