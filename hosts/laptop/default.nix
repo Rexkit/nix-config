@@ -221,6 +221,10 @@
 
   security.polkit.enable = true;
 
+  services.resolved = {
+    enable = true;
+  };
+
   fonts.fontDir.enable = true;
 
   environment.systemPackages = with pkgs; [
