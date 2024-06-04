@@ -66,7 +66,7 @@
     systemd.variables = ["--all"];
 
     settings = {
-      monitor = ",preferred,auto,auto";
+      monitor = "eDP-1,1366x768@60,0x0,1";
 
       "$notifycmd" = "notify-send -h string:x-canonical-private-synchronous:hypr-cfg -u low";
 
