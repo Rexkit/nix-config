@@ -77,6 +77,7 @@
   # Enable networking
   networking.networkmanager.enable = true;
   networking.networkmanager.dns = "systemd-resolved";
+  networking.firewall.cheackReversePath = false;
   services.resolved.enable = true;
 
   # Set your time zone.
