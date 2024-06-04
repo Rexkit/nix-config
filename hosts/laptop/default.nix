@@ -63,8 +63,6 @@
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   };
 
-  inputs.nixos-hardware.nixosModules.asus-zephyrus-gu603h;
-
   catppuccin = {
     enable = true;
     flavor = "mocha";

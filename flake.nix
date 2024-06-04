@@ -24,6 +24,7 @@
     hyprland,
     catppuccin,
     sops-nix,
+    nixos-hardware,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -35,6 +36,7 @@
         specialArgs = {inherit inputs outputs;};
         # > Our main nixos configuration file <
         modules = [
+          nixos-hardware.nixosModules.asus-zephyrus-gu603h
           ./hosts/laptop
           catppuccin.nixosModules.catppuccin
           home-manager.nixosModules.home-manager
